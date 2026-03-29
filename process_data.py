@@ -10,7 +10,7 @@ df.columns = df.columns.str.strip().str.lower()
 
 print("Columns:", df.columns)
 
-# 🔥 HANDLE BAD HEADER CASE
+# HANDLE BAD HEADER CASE
 if len(df.columns) == 1:
     df = df[df.columns[0]].str.split(",", expand=True)
     df.columns = ["product", "price", "quantity", "date", "region"]
